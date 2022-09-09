@@ -5,12 +5,14 @@ const PokemonCard = ({ selectedPokemonUrl }) => {
     const [pokemonDetails, setPokemonDetails] = useState(null)
 
     useEffect(() => {
-        fetch(selectedPokemonUrl)
-            .then(results => results.json())
-            .then((pokemonData) => {
-                console.log("do we have data", pokemonData)
-                setPokemonDetails(pokemonData)
-            })
+        if (selectedPokemonUrl) {
+            fetch(selectedPokemonUrl)
+                .then(results => results.json())
+                .then((pokemonData) => {
+                    console.log("do we have data", pokemonData)
+                    setPokemonDetails(pokemonData)
+                })
+        }
     }, [selectedPokemonUrl]);
 
 

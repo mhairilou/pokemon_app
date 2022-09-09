@@ -21,7 +21,7 @@ const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon, selectedPokemo
                     })
                 }
             </select>
-                <h5>This is the selected pokemon's URL : {selectedPokemon}</h5>
+            <h5>This is the selected pokemon's URL : {selectedPokemon}</h5>
 
         </div>)
 

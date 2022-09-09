@@ -4,7 +4,7 @@ import PokemonCard from "../components/PokemonCardComponent";
 
 const PokemonContainer = () => {
     const [allPokemonState, setAllPokemonState] = useState([]);
-    const [selectedPokemonState, setSelectedPokemonState] = useState(null)
+    const [selectedPokemonUrl, setSelectedPokemonUrl] = useState(null)
 
 
     useEffect(() => {
@@ -22,7 +22,7 @@ const PokemonContainer = () => {
 
     const handleSelectedPokemon = (pokemon) => {
         
-        return setSelectedPokemonState(pokemon)
+        return setSelectedPokemonUrl(pokemon)
     }
 
 
@@ -33,8 +33,8 @@ const PokemonContainer = () => {
         <div>
             <h2>This is the PokemonContainer</h2>
             <hr></hr>
-            <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonState} />
-            <PokemonCard selectedPokemonUrl={selectedPokemonState} />
+            <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
+            <PokemonCard selectedPokemonUrl={selectedPokemonUrl} />
         </div>
 
     )
