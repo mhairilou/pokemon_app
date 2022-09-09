@@ -31,8 +31,7 @@ const PokemonContainer = () => {
     return (
 
         <div>
-            <h2>This is the PokemonContainer</h2>
-            <hr></hr>
+            <h1>Very Excellent Pokemon App</h1>
             <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
             <PokemonCard selectedPokemonUrl={selectedPokemonUrl} />
         </div>
