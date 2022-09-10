@@ -2,13 +2,15 @@ import PokemonCard from "./PokemonCardComponent";
 
 const PokemonTeam = ({ currentTeamList }) => {
 
-
+  
+    
     return (
         <>
-            <h3>I am the pokemon team</h3>
-            <ul>{currentTeamList.map((pokemonUrl, index) => {
+            {currentTeamList.length !== 0 && <h3>Your team:</h3> }
+            <ul>{currentTeamList.map(({id, url, nickname}) => {
+                console.log(id)
                 return (
-                    <PokemonCard key={index} selectedPokemonUrl={pokemonUrl} />)
+                    <PokemonCard key={id} pokemonUrl={url} nickname={nickname}/>)
             })}</ul>
         </>
     )

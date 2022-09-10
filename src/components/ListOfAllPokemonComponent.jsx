@@ -1,3 +1,4 @@
+import { capitalize } from "../utils/strings";
 
 
 const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon}) => {
@@ -18,7 +19,7 @@ const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon}) => {
                     pokemons.map(pokemon => {
                         return (<
                             option key={pokemon.name}
-                            value={pokemon.url} > {pokemon.name} </option>
+                            value={pokemon.url} > {capitalize(pokemon.name)} </option>
                         )
                     })
                 }
