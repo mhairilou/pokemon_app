@@ -1,19 +1,20 @@
 import { capitalize } from "../utils/strings";
 
+//This component's job is to list all the Pokemon in a dropdown menu
+//and to update the state of the selectedPokemon state (in PokemonConatiner)
+//to the URL of the selected Pokemon.
 
-const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon}) => {
+
+const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon }) => {
 
 
     const handleChange = event => {
         return onSelectedPokemon(event.target.value)
     }
 
-
-
-
     return (
         <div>
-            <h2>Pick your Pokemon</h2>
+            <h2>Build your Dream Team</h2>
             <select defaultValue="" onChange={handleChange} >
                 <option value="" disabled > Choose a Pokemon! </option> {
                     pokemons.map(pokemon => {
@@ -24,8 +25,8 @@ const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon}) => {
                     })
                 }
             </select>
-            
-         
+
+
         </div>)
 
 

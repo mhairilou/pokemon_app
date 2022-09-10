@@ -1,38 +1,44 @@
-.App {
+@font-face {
+  font-family: "Pokemon";
+  src: url(./Pokemon\ Hollow.ttf);
+}
+
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgb(114, 170, 204);
   text-align: center;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.container {
+  padding: 20px;
+  text-align: center;
+  
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pokemons-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-family: "Pokemon";
+  font-size: 72px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.pokemon-card {
+  background-color: blanchedalmond;
+  width: 180px;
+  max-width: 300px;;
+  margin: 32px;
+  padding: 32px;
+  border-radius: 32px;
+  border-style: solid;
+  text-align: center;
+  
+  
 }

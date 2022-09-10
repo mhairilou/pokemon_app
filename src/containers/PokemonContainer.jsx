@@ -43,20 +43,20 @@ const PokemonContainer = () => {
 
 
     return (
-
         <div>
+        <div  className="container">
             <h1>Very Excellent Pokemon App</h1>
+            
             <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
-            <PokemonCard pokemonUrl={selectedPokemonUrl} />
+            
             <label>Give nickname?
                 <input onChange={handleNicknameInput} value={nicknameState}></input>
             </label>
-            <br></br>
             <button onClick={addSelectedPokemonToTeam}>I choose you!</button>
-
+            <PokemonCard pokemonUrl={selectedPokemonUrl} />
             <PokemonTeam currentTeamList={pokemonTeam} />
         </div>
-
+        </div>
     )
 };
 
