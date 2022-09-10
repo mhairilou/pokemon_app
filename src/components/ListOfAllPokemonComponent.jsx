@@ -1,6 +1,6 @@
 
 
-const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon, selectedPokemon }) => {
+const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon}) => {
 
 
     const handleChange = event => {
@@ -23,7 +23,7 @@ const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon, selectedPokemo
                     })
                 }
             </select>
-            <button>I choose you!</button>
+            
          
         </div>)
 
