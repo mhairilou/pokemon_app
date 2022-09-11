@@ -60,15 +60,15 @@ const PokemonContainer = () => {
             <div className="add-new-pokemon-container">
                 <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
                 <PokemonCard pokemonUrl={selectedPokemonUrl} />
-                <label>Give nickname?
-                    <input className="rounded" onChange={handleNicknameInput} value={nicknameState}></input>
-                </label>
-                <button className="rounded" onClick={addSelectedPokemonToTeam}>I choose you!</button>
+                <div>
+                    <label>Give nickname?
+                        <input className="rounded" onChange={handleNicknameInput} value={nicknameState}></input>
+                    </label>
+                    {(pokemonTeam.length < 6) && <button className="rounded" onClick={addSelectedPokemonToTeam}>I choose you!</button>}
+                </div>
             </div>
 
-            <div className="team">
-                <PokemonTeam currentTeamList={pokemonTeam} removePokemonFromTeam={removePokemonFromTeam} />
-            </div>
+            <PokemonTeam currentTeamList={pokemonTeam} removePokemonFromTeam={removePokemonFromTeam} />
 
         </div>
 

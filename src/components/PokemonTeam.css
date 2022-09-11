@@ -1,9 +1,7 @@
 .team {
     margin: 1rem;
     display: flex;
-    flex-direction: row;
-    width: 80%;
-    max-width: 100;
-    justify-items: center;
+    flex-wrap: wrap;
+    align-items: center;
 
 }
