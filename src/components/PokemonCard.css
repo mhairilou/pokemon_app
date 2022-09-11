@@ -1,0 +1,14 @@
+.pokemon-card {
+    background-color: rgb(194, 238, 247);
+    min-width: 16rem;
+    min-height: 22rem;
+    margin: 32px;
+    padding: 32px;
+    border-radius: 32px;
+    border-style: solid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    
+  }

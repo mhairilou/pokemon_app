@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { capitalize } from "../utils/strings";
-
+import "./PokemonCard.css"
 
 //This component's job is to fetch a Pokemon's details using its URL
 //and render them on a Card.
@@ -38,7 +38,6 @@ const PokemonCard = ({ id, pokemonUrl, nickname, remove}) => {
             <p>{capitalize(pokemonDetails.types[0].type.name)}</p>
             {pokemonDetails.types[1] && <p>{capitalize(pokemonDetails.types[1].type.name)}</p>}
             {nickname && <p>Nickname: {nickname}</p>}
-            {id && <p>Id: {id}</p>}
             {id && <button onClick={() => remove(id)}>Remove</button>}
         </div>
     )

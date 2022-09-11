@@ -1,4 +1,5 @@
 import { capitalize } from "../utils/strings";
+import "./ListOfAllPokemon.css"
 
 //This component's job is to list all the Pokemon in a dropdown menu
 //and to update the state of the selectedPokemon state (in PokemonConatiner)
@@ -15,8 +16,8 @@ const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon }) => {
     return (
         <div>
             <h2>Build your Dream Team</h2>
-            <select defaultValue="" onChange={handleChange} >
-                <option value="" disabled > Choose a Pokemon! </option> {
+            <select className="rounded"  defaultValue="" onChange={handleChange} >
+                <option className="rounded" value="" disabled > Choose a Pokemon! </option> {
                     pokemons.map(pokemon => {
                         return (<
                             option key={pokemon.name}

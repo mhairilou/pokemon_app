@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "Pokemon";
+    src: url(./Pokemon\ Hollow.ttf);
+  }
+@font-face {
+    font-family: "flower";
+    src: url(./IndieFlower-Regular.ttf);
+  }
+ 
+
+body {
+    font-family: "flower";
+ 
+     
+  }
+   
+header {
+    background-color: rgb(119, 119, 226);
+    margin: 0px;
+    padding: 0.5rem;
+    border-bottom: 5px solid rgb(152, 152, 250);
+    
+}
+h1 {
+    font-family: 'flower';
+    font-size: 3rem;
+    padding: 0.5rem;
+    
+  }
+
+.pokefont {
+    font-family: "Pokemon";
+}
+
+.allCardsContainer {
+    display: flex;
+}
+
+.add-new-pokemon-container {
+    /* border: 3px solid black; */
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-items: center;
+}
+
+
+
+.page {
+    display:flex
+}
+
+.rounded {
+    border-radius: 3rem;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+button, select {
+    font-family: "flower";
+}

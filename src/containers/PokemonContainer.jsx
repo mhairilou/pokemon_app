@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ListOfAllPokemonComponent from "../components/ListOfAllPokemonComponent";
 import PokemonCard from "../components/PokemonCardComponent";
 import PokemonTeam from "../components/PokemonTeam";
+import "./PokemonContainer.css"
 
 const PokemonContainer = () => {
     const [allPokemonState, setAllPokemonState] = useState([]);
@@ -52,20 +53,25 @@ const PokemonContainer = () => {
 
 
     return (
-        <div>
-            <div className="container">
-                <h1>Very Excellent Pokemon App</h1>
-
+        <div className="all">
+            <header>
+                <h1>Very Excellent <span className="pokefont">Pokemon </span>App</h1>
+            </header>
+            <div className="add-new-pokemon-container">
                 <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
-
-                <label>Give nickname?
-                    <input onChange={handleNicknameInput} value={nicknameState}></input>
-                </label>
-                <button onClick={addSelectedPokemonToTeam}>I choose you!</button>
                 <PokemonCard pokemonUrl={selectedPokemonUrl} />
+                <label>Give nickname?
+                    <input className="rounded" onChange={handleNicknameInput} value={nicknameState}></input>
+                </label>
+                <button className="rounded" onClick={addSelectedPokemonToTeam}>I choose you!</button>
+            </div>
+
+            <div className="team">
                 <PokemonTeam currentTeamList={pokemonTeam} removePokemonFromTeam={removePokemonFromTeam} />
             </div>
+
         </div>
+
     )
 };
 
