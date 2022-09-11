@@ -29,14 +29,23 @@ const PokemonContainer = () => {
 
 
     const addSelectedPokemonToTeam = () => {
-        if (selectedPokemonUrl) {
-            setPokemonTeam([...pokemonTeam, { url: selectedPokemonUrl, nickname: nicknameState, id:Math.random()}])
+        if (selectedPokemonUrl && pokemonTeam) {
+            setPokemonTeam([...pokemonTeam, { url: selectedPokemonUrl, nickname: nicknameState, id: Math.random() }])
             setNicknameState("")
         }
     }
 
-    const handleNicknameInput = event => {
+    const removePokemonFromTeam = (idOfokemonToRemove) => {
+        setPokemonTeam(currentTeamList => {
+            const newTeamList = currentTeamList.filter(pokemon => {
+                return pokemon.id !== idOfokemonToRemove
+            })
+            return newTeamList
 
+        })
+    }
+
+    const handleNicknameInput = event => {
         return setNicknameState(event.target.value)
 
     }
@@ -44,18 +53,18 @@ const PokemonContainer = () => {
 
     return (
         <div>
-        <div  className="container">
-            <h1>Very Excellent Pokemon App</h1>
-            
-            <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
-            
-            <label>Give nickname?
-                <input onChange={handleNicknameInput} value={nicknameState}></input>
-            </label>
-            <button onClick={addSelectedPokemonToTeam}>I choose you!</button>
-            <PokemonCard pokemonUrl={selectedPokemonUrl} />
-            <PokemonTeam currentTeamList={pokemonTeam} />
-        </div>
+            <div className="container">
+                <h1>Very Excellent Pokemon App</h1>
+
+                <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
+
+                <label>Give nickname?
+                    <input onChange={handleNicknameInput} value={nicknameState}></input>
+                </label>
+                <button onClick={addSelectedPokemonToTeam}>I choose you!</button>
+                <PokemonCard pokemonUrl={selectedPokemonUrl} />
+                <PokemonTeam currentTeamList={pokemonTeam} removePokemonFromTeam={removePokemonFromTeam} />
+            </div>
         </div>
     )
 };

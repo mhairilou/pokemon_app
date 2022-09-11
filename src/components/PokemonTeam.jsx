@@ -3,7 +3,10 @@ import PokemonCard from "./PokemonCardComponent";
 
 //This component's job is to pass props to the Cards for each Pokemon on the Team.
 
-const PokemonTeam = ({ currentTeamList }) => {
+const PokemonTeam = ({ currentTeamList, removePokemonFromTeam}) => {
+
+    if(currentTeamList === undefined)
+    return null
 
     return (
         <div>
@@ -11,7 +14,7 @@ const PokemonTeam = ({ currentTeamList }) => {
             <div className="pokemons-container">{currentTeamList.map(({ id, url, nickname }) => {
                 console.log(id)
                 return (
-                    <PokemonCard key={id} pokemonUrl={url} nickname={nickname} />
+                    <PokemonCard key={id} id={id} pokemonUrl={url} nickname={nickname} currentTeamList={currentTeamList} remove={removePokemonFromTeam}/>
                 )
 
             })}
