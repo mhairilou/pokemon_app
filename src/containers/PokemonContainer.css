@@ -10,21 +10,26 @@
 
 body {
     font-family: "flower";
+    font-size: 1.5rem;
+    background-image: url("./pokemon_background.jpg");
  
      
   }
    
 header {
-    background-color: rgb(119, 119, 226);
+    background-color: rgb(9, 103, 219);
     margin: 0px;
     padding: 0.5rem;
-    border-bottom: 5px solid rgb(152, 152, 250);
+    border-bottom: 15px solid rgb(228, 165, 83);
+    color: aliceblue;
     
 }
 h1 {
     font-family: 'flower';
     font-size: 3rem;
-    padding: 0.5rem;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
     
   }
 
@@ -32,12 +37,9 @@ h1 {
     font-family: "Pokemon";
 }
 
-.allCardsContainer {
-    display: flex;
-}
 
 .add-new-pokemon-container {
-    /* border: 3px solid black; */
+
     margin: 2rem;
     justify-content: center;
     align-items: center;
@@ -65,4 +67,5 @@ h1 {
 
 button, select {
     font-family: "flower";
+    font-size: 1.5rem;
 }
