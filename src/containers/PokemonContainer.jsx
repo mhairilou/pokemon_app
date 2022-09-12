@@ -15,7 +15,7 @@ const PokemonContainer = () => {
     }, []);
 
     const getPokemonFromApi = () => {
-        fetch("https://pokeapi.co/api/v2/pokemon")
+        fetch("https://pokeapi.co/api/v2/pokemon/?limit=300")
             .then(pokemonAPIResult => pokemonAPIResult.json())
             .then((listOfPokemonData) => setAllPokemonState(listOfPokemonData.results)
 
