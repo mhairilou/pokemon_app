@@ -15,7 +15,9 @@ const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon }) => {
 
     return (
         <div>
-            <h2>Build your Dream Team</h2>
+            <h2  className="centered">Build your Dream Team</h2>
+            
+            <div className="centered">
             <select className="rounded"  defaultValue="" onChange={handleChange} >
                 <option className="rounded" value="" disabled > Choose a Pokemon! </option> {
                     pokemons.map(pokemon => {
@@ -26,7 +28,7 @@ const ListOfAllPokemonComponent = ({ pokemons, onSelectedPokemon }) => {
                     })
                 }
             </select>
-
+</div>
 
         </div>)
 
