@@ -1,9 +1,7 @@
 .pokemon-card {
     background-color: rgb(202, 225, 240);
     min-width: 16rem;
-    min-height: 22rem;
-    max-width: 16rem;
-    max-height: 28rem;
+    width: fit-content;
     margin: 32px;
     padding: 32px;
     border-radius: 32px;
