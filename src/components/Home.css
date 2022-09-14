@@ -1,10 +1,30 @@
-button {
+.start-button {
     border-radius: 32px;
     background-color: green;
     color: aliceblue;
 
 }
 
-h1 {
-    text-align: left;
+.homepage-all {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 1024px;
+
+}
+
+.homepage-left {
+    flex: 1;
+    margin: 0px;
+}
+.homepage-right {
+    flex: 1;
+    margin: 0px;
+}
+
+
+.homepage-image {
+    margin: 0px;
 }

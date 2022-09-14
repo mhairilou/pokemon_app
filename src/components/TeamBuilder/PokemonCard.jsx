@@ -44,7 +44,7 @@ const PokemonCard = ({ id, pokemonUrl, nickname, remove }) => {
 
         <div className="pokemon-card">
             <h3> {capitalize(pokemonDetails.name)} </h3>
-            <img src={pokemonDetails.sprites.other.dream_world.front_default} alt={pokemonDetails.name}></img>
+            <img className="card-img" src={pokemonDetails.sprites.other.dream_world.front_default} alt={pokemonDetails.name}></img>
             {!pokemonDetails.types[1] && <h4> Type: </h4>}
             {pokemonDetails.types[1] && <h4>Types: </h4>}
             {pokemonDetails.types.map( type => <p key={type.type.name}>{capitalize(type.type.name)}</p>)}

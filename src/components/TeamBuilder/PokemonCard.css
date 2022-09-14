@@ -2,8 +2,8 @@
   background-color: rgb(214, 235, 248);
   min-width: 16rem;
   width: fit-content;
-  margin: 32px;
-  padding: 32px;
+  margin: 1em;
+  padding: 1em;
   border-radius: 32px;
   border: rgb(244, 184, 95) solid 10px;
   text-align: center;
@@ -14,7 +14,7 @@
 
 }
 
-img {
+.card-img {
   margin: auto;
   width: 50%;
   height: auto;
