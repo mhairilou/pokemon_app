@@ -3,7 +3,10 @@ import "./Home.css"
 
 const Home = () => {
     return(
-        <h1>I am the new homepage</h1>
+        <div>
+        <h1>Howdy!</h1>
+        <button>Start Here</button>
+        </div>
     )
 }
 
