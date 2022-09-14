@@ -54,9 +54,7 @@ const TeamBuilderContainer = () => {
 
     return (
         <div>
-            <header>
-                <h1>Very Excellent <span className="pokefont">Pokemon </span>App</h1>
-            </header>
+
             <div className="all">
                 {(pokemonTeam.length >= 6) && <h2> Dream Team Complete! </h2>}
                 {(pokemonTeam.length < 6) && <div className="add-new-pokemon-container">
