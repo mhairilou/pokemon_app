@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { capitalize } from "../utils/strings";
+import { capitalize } from "../../utils/strings";
 import "./PokemonCard.css"
 
 //This component's job is to fetch a Pokemon's details using its URL
 //and render them on a Card.
 
-const PokemonCard = ({ id, pokemonUrl, nickname, remove}) => {
+const PokemonCard = ({ id, pokemonUrl, nickname, remove }) => {
 
     const [pokemonDetails, setPokemonDetails] = useState(null)
 
@@ -21,12 +21,12 @@ const PokemonCard = ({ id, pokemonUrl, nickname, remove}) => {
         }
     }, [pokemonUrl]);
 
-   
+
 
     if (pokemonDetails === null)
         return null
-    
- 
+
+
 
     return (
 

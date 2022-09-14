@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ListOfAllPokemonComponent from "../components/ListOfAllPokemonComponent";
-import PokemonCard from "../components/PokemonCardComponent";
-import PokemonTeam from "../components/PokemonTeam";
+import ListOfAllPokemonComponent from "./PokemonContainer/ListOfAllPokemonComponent";
+import PokemonCard from "./PokemonContainer/PokemonCardComponent";
+import PokemonTeam from "./PokemonContainer/PokemonTeam";
 import "./PokemonContainer.css"
 
 const PokemonContainer = () => {
@@ -58,19 +58,19 @@ const PokemonContainer = () => {
                 <h1>Very Excellent <span className="pokefont">Pokemon </span>App</h1>
             </header>
             <div className="all">
-            {(pokemonTeam.length >= 6) && <h2> Dream Team Complete! </h2>}
-            {(pokemonTeam.length < 6) && <div  className="add-new-pokemon-container">
-                <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
-                <PokemonCard pokemonUrl={selectedPokemonUrl} />
-                
-               <div>
-                    <label className="rounded">Give nickname?
-                        <input className="rounded" onChange={handleNicknameInput} value={nicknameState}></input>
-                    </label>
-                     <button className="rounded" onClick={addSelectedPokemonToTeam}>I choose you!</button>
-                </div>
-            </div>}
-</div>
+                {(pokemonTeam.length >= 6) && <h2> Dream Team Complete! </h2>}
+                {(pokemonTeam.length < 6) && <div className="add-new-pokemon-container">
+                    <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
+                    <PokemonCard pokemonUrl={selectedPokemonUrl} />
+
+                    <div>
+                        <label className="rounded">Give nickname?
+                            <input className="rounded" onChange={handleNicknameInput} value={nicknameState}></input>
+                        </label>
+                        <button className="rounded" onClick={addSelectedPokemonToTeam}>I choose you!</button>
+                    </div>
+                </div>}
+            </div>
             <PokemonTeam currentTeamList={pokemonTeam} removePokemonFromTeam={removePokemonFromTeam} />
 
         </div>
