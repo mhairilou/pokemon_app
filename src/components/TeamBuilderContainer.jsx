@@ -56,17 +56,23 @@ const TeamBuilderContainer = () => {
         <div className="team-page">
 
             <div>
-                {(pokemonTeam.length >= 6) && <h2> Dream Team Complete! </h2>}
-                {(pokemonTeam.length < 6) && <div className="add-new-pokemon-container">
-                    <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
-                    <PokemonCard pokemonUrl={selectedPokemonUrl} />
 
-                    <div className="nickname-controls">
-                        <label>Give nickname?</label>
-                        <input className="nickname-input" onChange={handleNicknameInput} value={nicknameState}></input>
-                        <button className="rounded" onClick={addSelectedPokemonToTeam}>I choose you!</button>
-                    </div>
-                </div>}
+                <div className="add-new-pokemon-container">
+                    {(pokemonTeam.length >= 6) && <><h2> Dream Team Complete! </h2>
+                    <img className="pika-image" src={require("../images/pikachu.png")} alt="pikachu" />
+
+                    </>}
+                    {(pokemonTeam.length < 6) && <>
+                        <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
+                        <PokemonCard pokemonUrl={selectedPokemonUrl} />
+
+                        <div className="nickname-controls">
+                            <label>Give nickname?</label>
+                            <input className="nickname-input" onChange={handleNicknameInput} value={nicknameState}></input>
+                            <button className="rounded" onClick={addSelectedPokemonToTeam}>I choose you!</button>
+                        </div>
+                    </>}
+                </div>
             </div>
             <div className="team-display">
                 <PokemonTeam currentTeamList={pokemonTeam} removePokemonFromTeam={removePokemonFromTeam} />

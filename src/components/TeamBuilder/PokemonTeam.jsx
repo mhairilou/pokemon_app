@@ -9,7 +9,7 @@ const PokemonTeam = ({ currentTeamList, removePokemonFromTeam }) => {
         return null
 
     return (
-        <div>
+        <div className="team-container">
             {currentTeamList.length !== 0 && <h2>Your team:</h2>}
             <div className="team">
                 {currentTeamList.map(({ id, url, nickname }) => {

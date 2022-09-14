@@ -7,7 +7,7 @@ const Home = () => {
             <div className="homepage-left">
                 <h1>Howdy!</h1>
                 <h2>This is an app for Pokemon fans.</h2>
-                <button className="start-button">Start Here</button>
+                <a href="/play" className="start-button">Start Here</a>
             </div>
             <div className="homepage-right">
                 <img className="homepage-image" src={require("../images/arghpokemon.jpeg")} alt="pokemon" />
