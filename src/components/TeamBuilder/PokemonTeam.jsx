@@ -1,4 +1,4 @@
-import PokemonCard from "./PokemonCardComponent";
+import PokemonCard from "./PokemonCard";
 import "./PokemonTeam.css"
 
 //This component's job is to pass props to the Cards for each Pokemon on the Team.

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import ListOfAllPokemonComponent from "./PokemonContainer/ListOfAllPokemonComponent";
-import PokemonCard from "./PokemonContainer/PokemonCardComponent";
-import PokemonTeam from "./PokemonContainer/PokemonTeam";
-import "./PokemonContainer.css"
+import ListOfAllPokemonComponent from "./TeamBuilder/ListOfAllPokemon";
+import PokemonCard from "./TeamBuilder/PokemonCard";
+import PokemonTeam from "./TeamBuilder/PokemonTeam";
+import "./TeamBuilderContainer.css"
 
-const PokemonContainer = () => {
+const TeamBuilderContainer = () => {
     const [allPokemonState, setAllPokemonState] = useState([]);
     const [selectedPokemonUrl, setSelectedPokemonUrl] = useState(null)
     const [pokemonTeam, setPokemonTeam] = useState([])
@@ -78,4 +78,4 @@ const PokemonContainer = () => {
     )
 };
 
-export default PokemonContainer;
+export default TeamBuilderContainer;

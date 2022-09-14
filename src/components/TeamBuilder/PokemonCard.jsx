@@ -11,17 +11,29 @@ const PokemonCard = ({ id, pokemonUrl, nickname, remove }) => {
 
 
     useEffect(() => {
+        console.log('In pokemon card file, in the useEffect hook', pokemonUrl)
+
+        const abortController = new AbortController();
+
         if (pokemonUrl) {
-            fetch(pokemonUrl)
+            console.log('I am about to fetch data', pokemonUrl)
+            fetch(pokemonUrl, { signal: abortController.signal })
                 .then(results => results.json())
                 .then((pokemonData) => {
+                    console.log('pokemon data finally arrived from url!!', pokemonData)
                     setPokemonDetails(pokemonData)
                 })
+                .catch(() => { })
+        }
 
+        return () => {
+            abortController.abort()
+            console.log("effect cleanup", pokemonUrl)
         }
     }, [pokemonUrl]);
 
 
+    console.log('In pokemon card body, but not in a hook', pokemonUrl)
 
     if (pokemonDetails === null)
         return null

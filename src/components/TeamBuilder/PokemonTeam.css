@@ -1,3 +1,7 @@
+h2 {
+    text-align: center;
+}
+
 .team {
     margin: 1rem;
     display: flex;
@@ -6,10 +10,4 @@
     align-items: stretch;
     padding: 1rem;
 
-}
-
-
-
-h2 {
-    text-align: center;
 }
