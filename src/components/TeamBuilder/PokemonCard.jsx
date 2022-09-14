@@ -47,8 +47,7 @@ const PokemonCard = ({ id, pokemonUrl, nickname, remove }) => {
             <img src={pokemonDetails.sprites.other.dream_world.front_default} alt={pokemonDetails.name}></img>
             {!pokemonDetails.types[1] && <h4> Type: </h4>}
             {pokemonDetails.types[1] && <h4>Types: </h4>}
-            <p>{capitalize(pokemonDetails.types[0].type.name)}</p>
-            {pokemonDetails.types[1] && <p>{capitalize(pokemonDetails.types[1].type.name)}</p>}
+            {pokemonDetails.types.map( type => <p key={type.type.name}>{capitalize(type.type.name)}</p>)}
             {nickname && <p>Nickname: {nickname}</p>}
             {id && <button onClick={() => remove(id)}>Remove</button>}
         </div>
