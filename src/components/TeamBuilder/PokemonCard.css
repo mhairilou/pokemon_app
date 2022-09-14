@@ -1,9 +1,9 @@
 .pokemon-card {
   background-color: rgb(214, 235, 248);
   min-width: 16rem;
-  width: fit-content;
+  max-width: min-content;
+  min-height: max-content;
   margin: 1em;
-  padding: 1em;
   border-radius: 32px;
   border: rgb(244, 184, 95) solid 10px;
   text-align: center;
@@ -15,7 +15,18 @@
 }
 
 .card-img {
-  margin: auto;
-  width: 50%;
-  height: auto;
+  
+  width: 40%;
+
+}
+
+.header-on-card {
+  font-size: 1.5rem;
+}
+.type-on-card {
+  font-size: 1rem;
+}
+.remove-button {
+  border-radius: 32px;
+  margin-bottom: 1em;
 }

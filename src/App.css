@@ -17,12 +17,12 @@
 
 body {
     font-family: "flower";
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 header h1 {
     font-family: 'flower';
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin-left: 64px;
 
@@ -31,7 +31,6 @@ header h1 {
 header {
     background-color: rgb(0, 63, 141);
     margin: 0px;
-    padding: 0.5rem;
     border-bottom: 15px solid rgb(228, 165, 83);
     color: aliceblue;
     display: flex;
@@ -47,4 +46,5 @@ header a, header li {
     text-decoration: none;
     display: inline;
     padding: 32px;
+    font-size: 1.2em;
 }

@@ -53,24 +53,24 @@ const TeamBuilderContainer = () => {
 
 
     return (
-        <div>
+        <div className="team-page">
 
-            <div className="all">
+            <div>
                 {(pokemonTeam.length >= 6) && <h2> Dream Team Complete! </h2>}
                 {(pokemonTeam.length < 6) && <div className="add-new-pokemon-container">
                     <ListOfAllPokemonComponent pokemons={allPokemonState} onSelectedPokemon={handleSelectedPokemon} selectedPokemon={selectedPokemonUrl} />
                     <PokemonCard pokemonUrl={selectedPokemonUrl} />
 
-                    <div>
-                        <label className="rounded">Give nickname?
-                            <input className="rounded" onChange={handleNicknameInput} value={nicknameState}></input>
-                        </label>
+                    <div className="nickname-controls">
+                        <label>Give nickname?</label>
+                        <input className="nickname-input" onChange={handleNicknameInput} value={nicknameState}></input>
                         <button className="rounded" onClick={addSelectedPokemonToTeam}>I choose you!</button>
                     </div>
                 </div>}
             </div>
-            <PokemonTeam currentTeamList={pokemonTeam} removePokemonFromTeam={removePokemonFromTeam} />
-
+            <div className="team-display">
+                <PokemonTeam currentTeamList={pokemonTeam} removePokemonFromTeam={removePokemonFromTeam} />
+            </div>
         </div>
 
     )

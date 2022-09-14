@@ -2,40 +2,71 @@
     font-family: "Pokemon";
 }
 
+.team-page {
+    display: flex;
+    justify-content: space-between;
+}
 
 .add-new-pokemon-container {
+
     background-color: rgb(255, 242, 226);
     border-radius: 32px;
     /* border:rgb(15, 12, 8) dashed 3px; */
-    margin: 2rem;
+    margin: 1em;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: fit-content;
-    padding: 16px;
+    padding: 1em;
     box-shadow: rgba(99, 99, 99, 0.2) 5px 5px 8px 0px;
+
+
+}
+
+.team-display {
+
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
 }
 
 
 .rounded {
-    border-radius: 3rem;
+    border-radius: 32px;
     padding: 0.5rem;
-    margin: 1rem;
+    white-space: nowrap;
+}
+
+.nickname-controls {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.nickname-controls label, .nickname-controls button{
+    white-space: nowrap;
+}
+
+.nickname-input {
+    border-radius: 32px;
+    padding: 0.5rem;
+    margin: 1em;
 }
 
 .flex {
     display: flex;
 }
 
-button, select {
+button,
+select {
     font-family: "flower";
-    font-size: 1.5rem;
+    font-size: 1rem;
     justify-items: center;
 }
 
 .centered {
     justify-items: center;
 }
-
