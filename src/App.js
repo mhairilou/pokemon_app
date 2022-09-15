@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div>
         <header>
-          <h1>Very Excellent <span className="pokefont">Pokemon </span>App</h1>
+          <h1><a href="/">Very Excellent <span className="pokefont">Pokemon </span>App</a></h1>
           <NavBar />
         </header>
 
