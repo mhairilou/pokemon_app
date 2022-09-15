@@ -13,7 +13,10 @@ const About = () => {
         <li>Pokedex</li>
         <li>PokePairs</li>
     </ul>
-    <p>Disclaimer: I did not invent Pokemon. I am not that cool. All the copyrights belong to the people they belong to, and none of them are me. This is the software equivalent of Fan Art. Please don't sue me. With love, Mhairi Lou x</p>
+    <p>Disclaimer: I did not invent Pokemon. I am not that cool. 
+    <br/>All the copyrights belong to the people they belong to, and none of them are me. 
+    <br/>This is the software equivalent of Fan Art. Please don't sue me. With love, Mhairi Lou x</p>
+    <img className="mudkip" src={require("../images/mudkip4.jpeg")} alt="mudkip"></img>
     </div>
     )
 }
