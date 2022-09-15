@@ -71,5 +71,7 @@ select {
 }
 
 .pika-image {
-    width: 20%;
+    width: 100%;
+    border-radius: 32px;
+
 }

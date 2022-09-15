@@ -59,7 +59,7 @@ const TeamBuilderContainer = () => {
 
                 <div className="add-new-pokemon-container">
                     {(pokemonTeam.length >= 6) && <><h2> Dream Team Complete! </h2>
-                    <img className="pika-image" src={require("../images/pikachu.png")} alt="pikachu" />
+                    <img className="pika-image" src={require("../images/happypika.gif")} alt="pikachu" />
 
                     </>}
                     {(pokemonTeam.length < 6) && <>
